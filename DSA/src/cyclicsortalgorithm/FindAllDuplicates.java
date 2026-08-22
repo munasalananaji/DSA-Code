@@ -1,6 +1,5 @@
-package sortalgorithm;
+package cyclicsortalgorithm;
 
-import javax.swing.plaf.LabelUI;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,6 +1,4 @@
-package sortalgorithm;
-
-import java.util.Arrays;
+package cyclicsortalgorithm;
 
 public class MissingNumber {
     static void main(String[] args) {

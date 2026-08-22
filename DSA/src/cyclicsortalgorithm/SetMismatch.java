@@ -1,4 +1,4 @@
-package sortalgorithm;
+package cyclicsortalgorithm;
 // https://leetcode.com/problems/set-mismatch/
 import java.util.Arrays;
 

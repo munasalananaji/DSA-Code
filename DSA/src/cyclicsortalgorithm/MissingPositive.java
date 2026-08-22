@@ -1,4 +1,4 @@
-package sortalgorithm;
+package cyclicsortalgorithm;
 
 //https://leetcode.com/problems/first-missing-positive/
 public class MissingPositive {
