@@ -11,7 +11,7 @@ public class SortedMatrixBinarySearch {
                 {24,28,30,32},
                 {36,40,43,49}
         };
-        int[] result = searchInSortedMatrix(matrix, 50);
+        int[] result = searchInSortedMatrix(matrix, 20);
         System.out.println("The target element is at "+ Arrays.toString(result));
     }
 

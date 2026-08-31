@@ -4,7 +4,7 @@ public class Floor {
 
    public static void main(String[] args) {
        int[] arr = {2,5,8,12,14,16,17,21,28,30};
-       int target = 32;
+       int target = 15;
        System.out.println("floor num for the target element is "+floorNum(arr, target));
     }
 
@@ -25,7 +25,7 @@ public class Floor {
             {
                 end = mid -1;
             }
-            else return mid;
+            else return end;
 
         }
         //when loop breaker end will be less than the target and that end is mid - 1 which is exactly

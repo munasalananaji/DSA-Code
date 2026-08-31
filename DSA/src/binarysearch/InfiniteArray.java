@@ -4,7 +4,7 @@ public class InfiniteArray {
     static void main(String[] args) {
         int[] arr = {3, 5, 7, 9, 10, 90,
                 100, 130, 140, 160, 170};
-        int target = 170;
+        int target = 180;
         System.out.println("index num from the infinite array is "+ans(arr, target));
     }
 
@@ -13,12 +13,11 @@ public class InfiniteArray {
         //first find the start and end where the target lies in between the array
          int start =0;
          int end =1;
-         while(target > arr[end] )
+         while(target > arr[end] && end < arr.length)
          {
              int temp = end+1;
               end = end + (end-start+1)*2;
                start = temp;
-
                if(end> arr.length)
                {
                    end = arr.length-1;

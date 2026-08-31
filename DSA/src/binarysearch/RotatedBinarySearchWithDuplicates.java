@@ -3,7 +3,7 @@ package binarysearch;
 public class RotatedBinarySearchWithDuplicates {
 
     static void main(String[] args) {
-        int[] arr = {10,1,10,10,10};
+        int[] arr = {2,2,3,3,1,1};
         //First let's find the least element in the array then the left element would be pivot element
         //Then this small element would be the rotation count
         System.out.println("Rotated binary search count is "+binarySearch(arr));

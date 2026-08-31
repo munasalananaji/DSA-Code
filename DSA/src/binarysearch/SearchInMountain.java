@@ -2,10 +2,12 @@ package binarysearch;
 
 public class SearchInMountain {
     public static void main(String[] args) {
+        int[] arr = {2,4,6,8,10,15,16,19,12,11,8,6,5,0};
+        System.out.println("Mountain element from the given array is "+search(arr,  5));
 
     }
     // https://leetcode.com/problems/find-in-mountain-array/
-    int search(int[] arr, int target) {
+   static int search(int[] arr, int target) {
         int peak = peakIndexInMountainArray(arr);
         int firstTry = orderAgnosticBS(arr, target, 0, peak);
         if (firstTry != -1) {
@@ -15,7 +17,7 @@ public class SearchInMountain {
         return orderAgnosticBS(arr, target, peak+1, arr.length - 1);
     }
 
-    public int peakIndexInMountainArray(int[] arr) {
+    public static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 

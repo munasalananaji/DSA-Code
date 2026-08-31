@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class FirstAndLastPosition {
     public static void main(String[] args) {
-        //Give an array here
+        //Given an array here
         int arr[] = {5,7,7,8,8,8,10};
         System.out.println("The first and last index is "+ Arrays.toString(searchRange(arr , 8)));
     }
