@@ -1,4 +1,4 @@
-package stringrecursion.backtracking;
+package backtracking;
 
 public class NQueens {
     static void main(String[] args) {

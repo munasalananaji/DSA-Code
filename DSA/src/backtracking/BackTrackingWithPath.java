@@ -1,4 +1,4 @@
-package stringrecursion.backtracking;
+package backtracking;
 
 import java.util.Arrays;
 

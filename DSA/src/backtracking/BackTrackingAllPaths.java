@@ -1,4 +1,4 @@
-package stringrecursion.backtracking;
+package backtracking;
 //This code is about back tracking - Which means once you already visited the path then you should not
 //go back in the same path - So this code logic will apply
 //Now the back tracking once after you done with the recursion call you have to set back the path to reset
