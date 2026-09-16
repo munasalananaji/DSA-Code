@@ -1,0 +1,25 @@
+package StreamPrograms.non_string_programs;
+
+
+import java.util.List;
+import java.util.OptionalDouble;
+import java.util.stream.IntStream;
+
+
+public class AverageSalary {
+	
+	public static void main(String[] args)
+	{
+		
+		List<Employee> list = List.of(new Employee("nanaji", 80000,"Technical lead"),new Employee("avinash", 60000,"Software Engineer"),
+				              new Employee("nagraju", 27000,"Systems Engineer"));
+		
+		
+		IntStream AverageSalary = list.stream().mapToInt(Employee::getSalary).distinct();
+		
+		
+		System.out.println("Printing the second highest salary "+AverageSalary);
+		
+	}
+
+}

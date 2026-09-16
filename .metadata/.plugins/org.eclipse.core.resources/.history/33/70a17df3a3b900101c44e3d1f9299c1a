@@ -1,0 +1,20 @@
+package StreamPrograms.non_string_programs;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+/* Print prime numbers from 1 to 100*/
+public class CheckPrime {
+	public static void main(String[] args)
+	{
+		List<Integer> list = IntStream.rangeClosed(1, 100).filter(a -> IntStream.rangeClosed(2,a-1).allMatch(i -> a%i==0)).boxed().collect(Collectors.toList());
+		System.out.println("Printing all the prime numbers "+list);
+	}
+
+	private static boolean isprime(int a) {
+		if (a<2) return false;
+	return	IntStream.rangeClosed(2, a-1).allMatch(i -> a%i !=0);
+	}
+
+}

@@ -1,0 +1,74 @@
+package ibm_programs;
+
+public class PrintEvenOddThreads {
+	
+	public static void main(String[] args)
+	{
+		EvenOdd evenOdd = new EvenOdd();
+		Thread t1 = new Thread(evenOdd::printEven);
+		Thread t2 = new Thread(evenOdd::printOdd);
+		t1.start();t2.start();
+		
+		
+		
+		
+	}
+	
+
+}
+
+
+class EvenOdd
+{
+	private int num =0;
+	private final  int max = 10;
+	
+	Object lock = new Object();
+	
+	synchronized public void printEven()
+	{
+		while(num<=max)
+		{
+			if(num%2!=0)
+			{
+				try {
+					wait();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Some exception occured");
+				}
+			}
+			else
+			{
+				num++;
+				System.out.println("Even thread "+num);
+				notifyAll();
+			}
+		}
+	}
+	
+	synchronized public void printOdd()
+	{
+		while(num<=max)
+		{
+			if(num%2==0)
+			{
+				try {
+					wait();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Some exception occured");
+				}
+			}
+			else
+			{
+				num++;
+				System.out.println("Odd thread "+num);
+				notifyAll();
+			}
+		}
+	}
+	
+}

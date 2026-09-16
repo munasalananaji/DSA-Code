@@ -1,0 +1,15 @@
+package StreamPrograms.non_string_programs;
+
+public class ArmstrongNumber {
+	
+	public static void main(String[] args)
+	{
+		int num = 153;
+		String numString = String.valueOf(153);
+		int length = numString.length();
+		
+	int result =	numString.chars().map(a ->(int) Math.pow(a, length)).sum();
+	System.out.println(result);
+	}
+
+}

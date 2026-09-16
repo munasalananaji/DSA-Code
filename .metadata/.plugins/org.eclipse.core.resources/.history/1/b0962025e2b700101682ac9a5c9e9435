@@ -1,0 +1,61 @@
+package StreamPrograms.non_string_programs;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class DepartmentGroupAverageSalary {
+	 public static void main(String[] args) {
+
+	        List<Employee> employees = Arrays.asList(
+	            new Employee("Alice", "IT", 90000),
+	            new Employee("Bob", "Finance", 85000),
+	            new Employee("Charlie", "IT", 95000),
+	            new Employee("David", "HR", 87000),
+	            new Employee("Eve", "Finance", 82000),
+	            new Employee("Frank", "Sales", 78000),
+	            new Employee("Grace", "HR", 88000),
+	            new Employee("Hank", "Marketing", 73000)
+	        );
+	        
+	     Map<String, Double> list =    employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+	     System.out.println(list);
+	 }
+
+}
+
+
+class Employee {
+    private String name;
+    private String department;
+    private double salary;
+    
+    
+	public Employee(String name, String department, double salary) {
+		super();
+		this.name = name;
+		this.department = department;
+		this.salary = salary;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+   
+}

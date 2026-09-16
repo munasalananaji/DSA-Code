@@ -1,0 +1,5 @@
+package StreamPrograms.non_string_programs;
+
+public class DepartmentGroupAverageSalary {
+
+}

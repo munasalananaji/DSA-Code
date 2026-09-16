@@ -1,0 +1,20 @@
+package StreamPrograms.non_string_programs;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		
+	List<Integer> primeNumbers =	IntStream.rangeClosed(2, 100).filter(a -> IntStream.rangeClosed(2, a-1).allMatch(i -> a%i!=0)).boxed().collect(Collectors.toList());
+	System.out.println("Prime numbers are "+primeNumbers);
+
+	Map<Boolean, List<Integer>> list = IntStream.rangeClosed(0, 10).boxed().collect(Collectors.partitioningBy(a -> a%2==0));
+	
+	System.out.println("Even numbers are "+list.get(true)+"\nodd numbers are "+list.get(false));
+	}
+
+}

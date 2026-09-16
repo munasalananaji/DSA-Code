@@ -1,0 +1,32 @@
+package coreJava;
+
+public class SynchronizedExample {
+
+	public static void main(String[] args) {
+		Account account = new Account();
+		
+		Thread t1 = new Thread(()->account.withdraw(700), "user1" );
+		Thread t2 = new Thread(()->account.withdraw(600), "user1" );
+		t1.start();
+		t2.start();
+	
+	}
+
+}
+
+class Account
+{
+	public int balance = 1000;
+	public void withdraw(int amount)
+	{
+		if(balance>amount)
+		{
+			balance -= amount;
+			System.out.println("You have withdrawn the amount of "+amount+" rupees and remaining is "+balance);
+		}
+		else
+		{
+			System.out.println("You cannot withdraw as your balance is low "+balance);
+		}
+	}
+}

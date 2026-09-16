@@ -1,0 +1,17 @@
+package ibm_programs;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class SumNumbers {
+	
+	public static void main(String[] args)
+	{
+		int[] a = {2,5,10};
+		
+		long m = Arrays.stream(a).boxed().collect(Collectors.summingInt(k -> k));
+		System.out.println(m);
+	}
+
+}

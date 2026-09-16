@@ -1,0 +1,22 @@
+package coreJava;
+
+public class ComparableExample {
+
+	public static void main(String[] args) {
+		
+	
+
+	}
+
+}
+
+class Flower implements Comparable
+{
+
+	@Override
+	public int compareTo(Object o) {
+		
+		return 0;
+	}
+	
+}
