@@ -5,11 +5,8 @@ public class Ceiling {
 
    public static void main(String[] args) {
         int arr[] = {2,5,8,12,14,16,17,21,28,30};
-        int target = 32;
-
-            System.out.println("The cieling from an array is "+ceilingNum(arr, target));
-
-
+        int target = 27;
+        System.out.println("The cieling from an array is "+ceilingNum(arr, target));
     }
 
     private static int ceilingNum(int[] arr, int target) {
