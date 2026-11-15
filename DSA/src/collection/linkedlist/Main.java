@@ -1,30 +1,28 @@
 package collection.linkedlist;
 
-import java.util.LinkedList;
-
 public class Main {
-    static void main(String[] args) {
-        OwnLinkedList list = new OwnLinkedList();
-        list.insertFirst(10);
-        list.insertFirst(1);
-        list.insertFirst(7);
-
-        list.insertLast(78);
-        list.insertLast(12);
-        list.insert(2, 3);
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(8);
+        list.insertFirst(17);
+        list.insertLast(99);
+        list.insert(100, 3);
         list.display();
         System.out.println(list.deleteFirst());
         list.display();
-        System.out.println();
         System.out.println(list.deleteLast());
         list.display();
-        //again delete
-        System.out.println();
-        System.out.println(list.deleteLast());
+        System.out.println(list.delete(2));
+//        list.display();
+        list.insertRec(88, 2);
+//        list.display();
+        list.insertFirst(8);
         list.display();
-
-
-
+        list.duplicates();
+        list.display();
+        System.out.println("The middle node from the linked list is "+list.middleNode());
 
     }
 }
